@@ -1,0 +1,333 @@
+/* styles.css */
+.header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    padding-bottom: 0.5rem;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.address,
+.web-email {
+    flex: 1;
+    text-align: left;
+}
+
+.web-email {
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .address,
+    .web-email {
+        text-align: center;
+    }
+
+    .web-email {
+        margin-top: 10px;
+    }
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    border-bottom: 2px solid #007bff;
+    color: #007bff;
+    padding-bottom: .5rem;
+}
+
+.education-section h2 {
+    border-bottom: 2px solid #007bff;
+    color: #007bff;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.education-entry {
+    margin-bottom: 2rem; /* Increased margin for clear separation */
+}
+
+.education-entry h3 {
+    margin: 0;
+    font-size: 1.25em; /* Adjust size as needed */
+}
+
+.edu-date, /* Class for date range */
+.edu-details p,
+.edu-thesis p {
+    margin: 0.1rem 0; /* Smaller top and bottom margin */
+}
+
+.edu-thesis p {
+    margin-top: 0.5rem; /* Extra top margin before thesis */
+}
+
+.edu-thesis i {
+    font-style: italic;
+}
+
+/* Optional: If you want to make the address and contact details closer together */
+.contact-info p {
+    line-height: 1.2; /* Closer line height */
+}
+
+.education-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.edu-details {
+    flex: 3; /* Takes 3 parts of the available space */
+    /* ... other styles ... */
+}
+
+.edu-meta {
+    flex: 1; /* Takes 1 part of the available space */
+    text-align: right;
+    min-width: 150px; /* Adjust the minimum width as needed */
+}
+
+.edu-date {
+    font-weight: bold; /* Optional style */
+}
+
+@media (max-width: 768px) {
+    .education-entry {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .edu-meta {
+        text-align: left;
+        margin-top: 10px;
+        min-width: 0;
+    }
+}
+
+.publication-section h2 {
+    border-bottom: 2px solid #007bff;
+    color: #007bff;
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.publications {
+    list-style-type: none; /* Removes default list bullets */
+    padding-left: 0; /* Removes default padding */
+    margin-left: 0; /* Aligns with the rest of the content */
+}
+
+.publications li {
+    margin-bottom: 0.5rem; /* Space between publication entries */
+    text-align: justify; /* For justified text as seen in the screenshot */
+    line-height: 1.4; /* Adjust line height for readability */
+}
+
+.publications li:before {
+    content: "• "; /* Adds a custom bullet before each list item */
+    color: #007bff; /* Bullet color */
+    font-weight: bold; /* Makes the bullet bold */
+    display: inline-block; /* Needed to add content via ::before */
+    margin-right: 5px; /* Space between bullet and text */
+}
+
+.author-name {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.venue {
+    font-style: italic;
+}
+
+
+@media (max-width: 768px) {
+    .publications li {
+        text-align: left; /* Switches to left-aligned text on smaller screens */
+    }
+}
+
+
+/* Bottom Navigation Bar */
+.bottomnav {
+    background-color: rgba(0, 0, 0, 0.9); /* Darker semi-transparent background */
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden;
+    position: fixed;
+    bottom: 10px; /* Elevated above the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 55%; /* More narrow width */
+    z-index: 1000;
+}
+
+.bottomnav nav ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.bottomnav nav ul li {
+    display: inline-block;
+}
+
+.bottomnav nav ul li a {
+    text-decoration: none;
+    color: white; /* Light text for contrast on dark background */
+    padding: 8px 10px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.bottomnav nav ul li a:hover,
+.bottomnav nav ul li a:focus {
+    background-color: #222; /* Slightly darker background on hover */
+}
+
+@media (max-width: 768px) {
+    .bottomnav {
+        width: 80%; /* Adjust the width on smaller screens */
+        bottom: 10px; /* Keep the elevated position */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .bottomnav nav ul li a {
+        padding: 8px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+}
+
+/* Hide elements when printing or saving to PDF */
+.hidden-in-pdf {
+    display: none !important;
+}
+
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px; /* Adjust width as needed */
+    height: 100%;
+    background: #f7f7f7;
+    padding: 1em;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5em;
+    display: block;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #e7e7e7;
+}
+
+/* Add this class to hide elements when printing or saving to PDF */
+.hidden-in-pdf {
+    display: none !important;
+}
+
+
+
+.download-button {
+    padding: 0.6rem 1.2rem;
+    margin-bottom: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: #0056b3;
+}
+
+.hidden-in-pdf {
+    display: none !important;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #f7f7f7;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    bottom: 25px;
+    width: 100%;
+}
+
+footer p {
+    margin: 0px 0;
+    color: #333;
+}
+
+
+
+/* Responsive layout for tablets */
+@media (min-width: 600px) and (max-width: 900px) {
+    body {
+        padding: 0 2rem;
+    }
+}
+
+/* Responsive layout for mobile devices */
+@media (max-width: 599px) {
+    body {
+        padding: 0 1rem;
+    }
+
+    .download-button {
+        width: 100%;
+    }
+}
